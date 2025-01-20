@@ -110,12 +110,12 @@ class Solution {
     int toSumTree(Node *node)
     {
         if(node==NULL) return 0;
-        int old_val=node->data;
+        int val=node->data;
         
         // recursive call
         node->data=toSumTree(node->left)+toSumTree(node->right);
         
-        return node->data+old_val;
+        return node->data+val;
     }
 };
 
